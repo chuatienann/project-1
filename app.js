@@ -4,7 +4,7 @@ flipsTag = document.querySelector(".flips b"),
 refreshBtn = document.querySelector(".info button");
 const messageEl = document.querySelector('#message');
 
-let maxTime = 40;
+let maxTime = 30;
 let timeLeft = maxTime;
 let flips = 0;
 let matchedCard = 0;
@@ -14,7 +14,7 @@ let cardOne, cardTwo, timer;
 
 function initTimer() {
     if(timeLeft <= 0) {
-        messageEl.textContent = "You did not complete";
+        messageEl.textContent = "You did not complete, better luck next time";
         return clearInterval(timer);
 
     }
@@ -65,7 +65,7 @@ function matchCards(img1, img2) {
         cardTwo.classList.remove("shake", "flip");
         cardOne = cardTwo = "";
         disableDeck = false;
-    }, 1000);
+    }, 300);
 }
 
 function shuffleCard() {
@@ -76,7 +76,7 @@ function shuffleCard() {
     timeTag.innerText = timeLeft;
     flipsTag.innerText = flips;
     disableDeck = isPlaying = false;
-
+    messageEl.textContent = "Flip and match all cards to win"
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
     arr.sort(() => Math.random() > 0.5 ? 1 : -1);
 
