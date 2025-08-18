@@ -22,7 +22,7 @@ body{
 .main{
   background:#faf0e6;  
   border-radius: 15px;  
-  padding: 25px 25px 100px 25px;
+  padding: 25px 25px 150px 25px;
 }
 .cards, .card, .view, .info, p{
   align-items: center;  
@@ -133,5 +133,5 @@ body{
   width: 100%;
   padding: 0 20px;
   background: #fff;
-  height: 30px;
+  height: 90px;
 }
